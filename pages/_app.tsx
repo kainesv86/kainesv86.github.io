@@ -5,7 +5,7 @@ import Navbar from "../components/navbar";
 
 function MyApp({ Component, pageProps }: AppProps) {
         return (
-                <div className="flex flex-col min-h-screen font-body">
+                <div className="relative flex flex-col min-h-screen bg-yellow-50 font-body">
                         <Navbar />
                         <Component {...pageProps} />
                 </div>

@@ -1,4 +1,5 @@
 export interface SocialIconDto {
         color?: string;
-        className?: string;
+        classNameSvg?: string;
+        classNamePath?: string;
 }
