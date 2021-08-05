@@ -11,6 +11,7 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
         const NavBarLink = [
                 { link: "/about", label: "About" },
                 { link: "/work", label: "Work" },
+                { link: "/skill", label: "Skill" },
                 { link: "/contact", label: "Contact" },
         ];
         const scrollY = useScrollPosition(60);
