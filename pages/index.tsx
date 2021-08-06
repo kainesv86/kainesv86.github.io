@@ -1,10 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 
-import Facebook from "../common/images/socialIcon/facebook";
-import Github from "../common/images/socialIcon/github";
-import Linkedin from "../common/images/socialIcon/linkedin";
-import { SocialIconDto } from "../common/images/socialIcon/SocialIconDto.interface";
+import Socials from "../components/common/socials";
 
 import Language from "../common/images/skillicon/language";
 import FrontEnd from "../common/images/skillicon/frontend";
@@ -18,24 +15,14 @@ import ArrowUp from "../common/images/functionicon/arrowup";
 import Card, { CardProps } from "../components/common/card";
 import Cards from "../components/cards";
 
-interface SocialMediaProps {
-        link: string;
-        Icon: React.FunctionComponent<SocialIconDto>;
-}
-
 interface Skill {
-        Icon: React.FunctionComponent<SocialIconDto>;
+        Icon: React.FunctionComponent;
         name: string;
         details: Array<string>;
         description: string;
 }
 
 export default function Home() {
-        const SocialMedia: Array<SocialMediaProps> = [
-                { link: "/1", Icon: Facebook },
-                { link: "/2", Icon: Github },
-                { link: "/3", Icon: Linkedin },
-        ];
         const projects: Array<CardProps> = [
                 {
                         name: "AnchorCo",
@@ -146,29 +133,7 @@ export default function Home() {
                                         </div>
                                 </div>
                                 <div className="flex flex-col items-center justify-center mt-10 sm:mt-20">
-                                        <ul className="flex mb-2 sm:mb-4">
-                                                {SocialMedia.map((Item, index) => {
-                                                        return (
-                                                                <li
-                                                                        className={`${
-                                                                                index === SocialMedia.length - 1
-                                                                                        ? ""
-                                                                                        : "mr-8"
-                                                                        }`}
-                                                                        key={Item.link}
-                                                                >
-                                                                        <Link href={Item.link}>
-                                                                                <a href={Item.link}>
-                                                                                        <Item.Icon
-                                                                                                classNameSvg="group transform hover:scale-110 duration-150 w-8 sm:w-10"
-                                                                                                classNamePath="fill-current group-hover:text-black text-gray-800 duration-150"
-                                                                                        />
-                                                                                </a>
-                                                                        </Link>
-                                                                </li>
-                                                        );
-                                                })}
-                                        </ul>
+                                        <Socials />
                                         <p className="max-w-2xl text-xs text-center text-gray-500 duration-300 sm:text-2xl hover:translate-y-5 transform-gpu">
                                                 You can read more about my biography, experience, skills, education, and
                                                 much more in the next space.
@@ -330,7 +295,7 @@ export default function Home() {
                                                                                                                 key={
                                                                                                                         item.description
                                                                                                                 }
-                                                                                                                className="flex items-center justify-center px-8 mb-2 text-lg font-normal h-72"
+                                                                                                                className="flex items-center justify-center mb-2 text-lg font-normal sm:px-8 h-72"
                                                                                                         >
                                                                                                                 <p>
                                                                                                                         {
@@ -348,7 +313,7 @@ export default function Home() {
                                         </div>
                                 </div>
                         </div>
-                        <div className="flex flex-col flex-1 p-4 mt-20 sm:p-32 bg-yellow-50"></div>
+                        <div className="flex flex-col flex-1 bg-yellow-50"></div>
                 </div>
         );
 }
