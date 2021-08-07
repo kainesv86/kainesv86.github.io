@@ -18,6 +18,22 @@ module.exports = {
                         },
                         spacing: {
                                 128: "32rem",
+                                144: "36rem",
+                        },
+                        animation: {
+                                jumping2s: "jumping 10s linear infinite",
+                                scalepoint: "scalepoint 5s linear infinite",
+                        },
+                        keyframes: {
+                                jumping: {
+                                        "0%, 4%,100%": { transform: "translateY(0)" },
+                                        "2%": { transform: "translateY(-15px)" },
+                                        "1%, 3%": { transform: "translateY(-25px)" },
+                                },
+                                scalepoint: {
+                                        "0,4%,100%": { transform: "scale(1)" },
+                                        "2%": { transform: "scale(1.1)" },
+                                },
                         },
                 },
         },

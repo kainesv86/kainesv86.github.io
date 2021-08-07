@@ -3,7 +3,7 @@ import * as React from "react";
 export interface CardsProps {}
 
 const Cards: React.FunctionComponent<CardsProps> = ({ children }) => {
-        return <div className="flex flex-col items-center w-full sm:justify-around sm:flex-row">{children}</div>;
+        return <div className="flex items-center justify-center w-full">{children}</div>;
 };
 
 export default Cards;
