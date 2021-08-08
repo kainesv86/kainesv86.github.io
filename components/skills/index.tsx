@@ -84,11 +84,59 @@ const Skills: React.FunctionComponent<SkillsProps> = () => {
         ];
 
         return (
-                <div className="flex flex-col flex-1 h-screen px-0 pt-32 bg-yellow-50 sm:px-44">
-                        <div className="px-8 py-2 mx-4 mb-4 text-center rounded shadow sm:mx-0 sm:mb-20 bg-amber-100">
+                <div className="flex flex-col items-center flex-1 h-screen px-4 pt-32 bg-yellow-50 sm:px-44">
+                        <div className="w-full px-8 py-2 mb-4 text-center rounded shadow-md sm:mx-0 sm:mb-20 bg-yellow-50">
                                 <p className="text-4xl font-medium text-gray-800 ">Skill</p>
                         </div>
-                        <div>
+                        <div className="flex flex-col px-4 mt-12 sm:flex-row">
+                                <div className="mb-4 sm:mr-96">
+                                        <div className="mb-4">
+                                                <p className="mb-4 text-2xl font-bold text-gray-800 sm:text-3xl">
+                                                        Programing language
+                                                </p>
+                                                <p className="text-lg font-medium text-gray-500 sm:text-xl">
+                                                        Javascript, Java, C#
+                                                </p>
+                                        </div>
+                                        <div className="mb-4">
+                                                <p className="mb-4 text-2xl font-bold text-gray-800 sm:text-3xl">
+                                                        Frontend
+                                                </p>
+                                                <p className="text-lg font-medium text-gray-500 sm:text-xl">
+                                                        ReactJS, Redux, JQuery, HTML + CSS
+                                                </p>
+                                        </div>
+                                        <div>
+                                                <p className="mb-4 text-2xl font-bold text-gray-800 sm:text-3xl">
+                                                        Databases
+                                                </p>
+                                                <p className="text-lg font-medium text-gray-500 sm:text-xl">MongoDB</p>
+                                        </div>
+                                </div>
+                                <div>
+                                        <div className="mb-4">
+                                                <p className="mb-4 text-2xl font-bold text-gray-800 sm:text-3xl">
+                                                        Backend
+                                                </p>
+                                                <p className="text-lg font-medium text-gray-500 sm:text-xl">NodeJS</p>
+                                        </div>
+                                        <div className="mb-4">
+                                                <p className="mb-4 text-2xl font-bold text-gray-800 sm:text-3xl">
+                                                        Devops
+                                                </p>
+                                                <p className="text-lg font-medium text-gray-500 sm:text-xl">Docker</p>
+                                        </div>
+                                        <div>
+                                                <p className="mb-4 text-2xl font-bold text-gray-800 sm:text-3xl">
+                                                        Others
+                                                </p>
+                                                <p className="text-lg font-medium text-gray-500 sm:text-xl">
+                                                        Figma, Vim, Git
+                                                </p>
+                                        </div>
+                                </div>
+                        </div>
+                        {/* <div>
                                 <div className="flex flex-col sm:flex-row">
                                         <div className="flex flex-col-reverse items-center justify-start sm:flex-col">
                                                 <div className="flex flex-col items-center justify-center w-64 mt-4 rounded sm:mb-8 sm:py-4 sm:mt-0 sm:shadow h-28 sm:bg-amber-100">
@@ -214,7 +262,7 @@ const Skills: React.FunctionComponent<SkillsProps> = () => {
                                                 </div>
                                         </div>
                                 </div>
-                        </div>
+                        </div> */}
                 </div>
         );
 };

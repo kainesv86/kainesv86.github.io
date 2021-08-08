@@ -32,7 +32,7 @@ module.exports = {
                                 },
                                 scalepoint: {
                                         "0,4%,100%": { transform: "scale(1)" },
-                                        "2%": { transform: "scale(1.1)" },
+                                        "2%": { transform: "scale(1.25)" },
                                 },
                         },
                 },

@@ -1,6 +1,7 @@
 import * as React from "react";
 import Card, { CardProps } from "../common/card";
 import Cards from "../cards";
+import Link from "next/link";
 
 export interface WorkProps {}
 
@@ -67,68 +68,20 @@ const Work: React.FunctionComponent<WorkProps> = () => {
                                 <div className="absolute top-0 left-0 flex h-auto duration-300" style={Swing}>
                                         <Cards>
                                                 {projects.map((item) => (
-                                                        <div
+                                                        <Card
                                                                 key={item.name}
-                                                                className="flex flex-col items-center duration-500 group transform-gpu hover:-translate-y-1/2 sm:delay-500"
-                                                        >
-                                                                <div className="flex flex-col items-center justify-center w-screen mb-8 delay-500 cursor-pointer sm:w-44 h-80 animate-jumping2s sm:h-144">
-                                                                        <div className="m-2">
-                                                                                <img
-                                                                                        src={item.logo}
-                                                                                        alt=""
-                                                                                        className="w-40 h-40"
-                                                                                />
-                                                                        </div>
-                                                                        <p className="text-4xl font-bold text-gray-800">
-                                                                                {item.name}
-                                                                        </p>
-                                                                        <p className="text-xl text-gray-600">
-                                                                                {item.field}
-                                                                        </p>
-                                                                        <p className="text-sm text-gray-600">
-                                                                                {item.role}
-                                                                        </p>
-                                                                </div>
-                                                                <div className="flex items-center justify-center w-screen mx-2 mb-8 overflow-hidden rounded h-80 sm:h-144">
-                                                                        <img
-                                                                                src={item.imageUrl}
-                                                                                alt=""
-                                                                                className="object-cover w-full sm:h-full sm:w-auto"
-                                                                        />
-                                                                </div>
-                                                        </div>
+                                                                name={item.name}
+                                                                field={item.field}
+                                                                logo={item.logo}
+                                                                role={item.role}
+                                                                link={item.link}
+                                                                imageUrl={item.imageUrl}
+                                                        />
                                                 ))}
-                                                {/* <div className="flex flex-col items-center duration-500 group transform-gpu hover:-translate-y-1/2 sm:delay-500">
-                                                        <div className="flex flex-col items-center justify-center w-screen mb-8 delay-500 cursor-pointer sm:w-44 h-80 animate-jumping2s sm:h-144">
-                                                                <div className="m-2">
-                                                                        <img
-                                                                                src={projects[0].logo}
-                                                                                alt=""
-                                                                                className="w-40 h-40"
-                                                                        />
-                                                                </div>
-                                                                <p className="text-4xl font-bold text-gray-800">
-                                                                        {projects[0].name}
-                                                                </p>
-                                                                <p className="text-xl text-gray-600">
-                                                                        {projects[0].field}
-                                                                </p>
-                                                                <p className="text-sm text-gray-600">
-                                                                        {projects[0].role}
-                                                                </p>
-                                                        </div>
-                                                        <div className="flex items-center justify-center w-screen mx-2 mb-8 overflow-hidden rounded h-80 sm:h-144">
-                                                                <img
-                                                                        src={projects[0].imageUrl}
-                                                                        alt=""
-                                                                        className="object-cover w-full sm:h-full sm:w-auto"
-                                                                />
-                                                        </div>
-                                                </div> */}
                                         </Cards>
                                 </div>
                         </div>
-                        <button className="px-4 py-2 text-lg font-medium text-gray-800 duration-300 transform border-2 border-gray-800 w-min hover:scale-110 mt-36">
+                        <button className="px-4 py-2 text-lg font-medium text-gray-800 duration-300 transform border-2 border-gray-800 rounded w-min hover:scale-110 mt-36">
                                 <p className="w-max">See more project</p>
                         </button>
                 </div>

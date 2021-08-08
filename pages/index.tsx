@@ -1,5 +1,4 @@
 import * as React from "react";
-import Link from "next/link";
 
 import Socials from "../components/common/socials";
 
@@ -10,10 +9,9 @@ import Databases from "../common/images/skillicon/databases";
 import Devops from "../common/images/skillicon/devops";
 import Others from "../common/images/skillicon/others";
 
-import ArrowUp from "../common/images/functionicon/arrowup";
-
 import Skills from "../components/skills";
 import Work from "../components/work";
+import Contact from "../components/contact";
 
 interface Skill {
         Icon: React.FunctionComponent;
@@ -23,70 +21,6 @@ interface Skill {
 }
 
 export default function Home() {
-        const skills: Array<Skill> = [
-                {
-                        name: "Programing language",
-                        details: ["Javascript", "C#", "Java"],
-                        description:
-                                "1 A programming language is a formal language comprising a set of strings that produce various kinds of machine code output. Programming languages are one kind of computer language, and are used in computer programming to implement algorithms. Most programming languages consist of instructions for computers.",
-                        Icon: Language,
-                },
-                {
-                        name: "Frontend",
-                        details: ["ReactJS", "Redux", "JQuery", "CSS + HTML"],
-                        description:
-                                "2 A programming language is a formal language comprising a set of strings that produce various kinds of machine code output. Programming languages are one kind of computer language, and are used in computer programming to implement algorithms. Most programming languages consist of instructions for computers.",
-                        Icon: FrontEnd,
-                },
-                {
-                        name: "Backend",
-                        details: ["NodeJs"],
-                        description:
-                                "3 A programming language is a formal language comprising a set of strings that produce various kinds of machine code output. Programming languages are one kind of computer language, and are used in computer programming to implement algorithms. Most programming languages consist of instructions for computers.",
-                        Icon: BackEnd,
-                },
-                {
-                        name: "Databases",
-                        details: ["MongoDB"],
-                        description:
-                                "4 A programming language is a formal language comprising a set of strings that produce various kinds of machine code output. Programming languages are one kind of computer language, and are used in computer programming to implement algorithms. Most programming languages consist of instructions for computers.",
-                        Icon: Databases,
-                },
-                {
-                        name: "Devops",
-                        details: ["Docker"],
-                        description:
-                                "5 A programming language is a formal language comprising a set of strings that produce various kinds of machine code output. Programming languages are one kind of computer language, and are used in computer programming to implement algorithms. Most programming languages consist of instructions for computers.",
-                        Icon: Devops,
-                },
-                {
-                        name: "Others",
-                        details: ["Figma", "Vim", "Git"],
-                        description:
-                                "6 A programming language is a formal language comprising a set of strings that produce various kinds of machine code output. Programming languages are one kind of computer language, and are used in computer programming to implement algorithms. Most programming languages consist of instructions for computers.",
-                        Icon: Others,
-                },
-        ];
-
-        const [currentSkill, setCurrentSkill] = React.useState<number>(0);
-
-        const handleSkillOnClick = (skill: number) => {
-                if (skill < 0) return setCurrentSkill(skills.length - 1);
-                if (skill > skills.length - 1) return setCurrentSkill(0);
-                return setCurrentSkill(skill);
-        };
-
-        React.useEffect(() => {
-                const interval = setInterval(() => {
-                        handleSkillOnClick(currentSkill + 1);
-                }, 5000);
-                return () => clearInterval(interval);
-        }, [currentSkill]);
-
-        const skillSelectAnimation = React.useMemo<React.CSSProperties>(() => {
-                return { transform: `translateY(${(-currentSkill / 6) * 100}%)` };
-        }, [currentSkill]);
-
         return (
                 <div>
                         <div className="flex flex-col flex-1 p-4 mt-20 sm:p-32 bg-yellow-50">
@@ -115,7 +49,7 @@ export default function Home() {
                         </div>
                         <Work />
                         <Skills />
-                        <div className="flex flex-col flex-1 bg-yellow-50"></div>
+                        <Contact />
                 </div>
         );
 }
