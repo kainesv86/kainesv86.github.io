@@ -20,7 +20,7 @@ const Form: React.FunctionComponent<FormProps> = () => {
         return (
                 <form onSubmit={handleSubmit(onSubmit)} className="sm:py-12 sm:w-132">
                         <p className="text-xl font-bold text-gray-800 sm:text-3xl">Send email message</p>
-                        <div className="flex">
+                        <div className="flex flex-col sm:flex-row">
                                 <TextField
                                         name="name"
                                         register={register}
@@ -37,7 +37,7 @@ const Form: React.FunctionComponent<FormProps> = () => {
                                 placeholder="Your message"
                                 className="sm:h-48"
                         />
-                        <div className="flex flex-col items-center">
+                        <div className="flex justify-center sm:justify-end">
                                 <button
                                         className="px-4 py-2 mb-2 text-gray-800 border-2 border-gray-800 rounded"
                                         type="submit"

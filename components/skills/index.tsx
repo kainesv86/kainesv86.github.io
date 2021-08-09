@@ -56,7 +56,7 @@ const Skills: React.FunctionComponent<SkillsProps> = () => {
                                 <p className="text-4xl font-medium text-gray-800 ">Skills</p>
                         </div>
                         <div className="flex flex-col px-4 mt-4 sm:mt-12 sm:flex-row">
-                                <div className="mb-4 sm:mr-96">
+                                <div className="mb-4 duration-300 hover:translate-x-6 hover:translate-y-6 sm:mr-96 transform-none sm:transform-gpu">
                                         {skills.slice(0, 3).map((item) => (
                                                 <div className="mb-4" key={item.name}>
                                                         <p className="mb-4 text-2xl font-bold text-gray-800 sm:text-3xl">
@@ -68,7 +68,7 @@ const Skills: React.FunctionComponent<SkillsProps> = () => {
                                                 </div>
                                         ))}
                                 </div>
-                                <div>
+                                <div className="duration-300 hover:-translate-x-6 hover:translate-y-6 transform-none sm:transform-gpu">
                                         {skills.slice(3, 6).map((item) => (
                                                 <div className="mb-4" key={item.name}>
                                                         <p className="mb-4 text-2xl font-bold text-gray-800 sm:text-3xl">

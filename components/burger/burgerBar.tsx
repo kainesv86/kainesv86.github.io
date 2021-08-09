@@ -1,5 +1,6 @@
 import * as React from "react";
 import { NavBarLink } from "../navbar";
+import useWindowDimensions from "../../hooks/useWIndowDimensions";
 
 export interface BurgerBarProps {
         active?: boolean;

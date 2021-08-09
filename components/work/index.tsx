@@ -49,18 +49,32 @@ const Work: React.FunctionComponent<WorkProps> = () => {
 
         return (
                 <div className="flex flex-col items-center flex-1 h-screen bg-yellow-50">
-                        <div className="w-full px-8 py-2 text-center rounded shadow mb-36">
-                                <div className="flex items-center justify-between ">
-                                        <div className="flex invisible">
-                                                <span className="w-4 h-4 mr-4 bg-gray-900 rounded-full"></span>
-                                                <span className="w-4 h-4 mr-4 bg-gray-900 rounded-full"></span>
-                                                <span className="w-4 h-4 bg-gray-900 rounded-full"></span>
-                                        </div>
-                                        <p className="text-4xl font-medium text-gray-800">Work</p>
-                                        <div className="flex">
-                                                <span className="w-4 h-4 mr-4 delay-100 transform bg-blue-500 rounded-full animate-scalepoint"></span>
-                                                <span className="w-4 h-4 mr-4 delay-200 transform bg-green-500 rounded-full animate-scalepointl"></span>
-                                                <span className="w-4 h-4 delay-300 transform bg-red-500 rounded-full animate-scalepoint"></span>
+                        <div className="w-full px-4 sm:px-44">
+                                <div className="w-full px-8 py-2 text-center rounded shadow mb-36 ">
+                                        <div className="flex flex-col items-center justify-between sm:flex-row">
+                                                <div className="flex invisible">
+                                                        <span className="w-4 h-4 mr-4 bg-gray-900 rounded-full"></span>
+                                                        <span className="w-4 h-4 mr-4 bg-gray-900 rounded-full"></span>
+                                                        <span className="w-4 h-4 bg-gray-900 rounded-full"></span>
+                                                </div>
+                                                <p className="text-4xl font-medium text-gray-800">Work</p>
+                                                <div className="flex">
+                                                        {projects.map((item, index) => (
+                                                                <span
+                                                                        key={item.name}
+                                                                        onClick={() => setProject(index)}
+                                                                        className={`w-4 h-4 ${
+                                                                                index !== projects.length - 1
+                                                                                        ? "mr-4"
+                                                                                        : ""
+                                                                        } delay-100 transform cursor-pointer hover:scale-125 duration-300 ${
+                                                                                index === project
+                                                                                        ? "bg-blue-500"
+                                                                                        : "bg-gray-800"
+                                                                        } rounded-full`}
+                                                                ></span>
+                                                        ))}
+                                                </div>
                                         </div>
                                 </div>
                         </div>

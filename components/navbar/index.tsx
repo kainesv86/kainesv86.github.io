@@ -6,7 +6,6 @@ import Burger from "../burger";
 import BurgerBar from "../burger/burgerBar";
 
 import useWindowDimensions from "../../hooks/useWIndowDimensions";
-import useScrollPosition from "@react-hook/window-scroll";
 
 export interface NavBarProps {}
 
@@ -18,17 +17,15 @@ export const NavBarLink = [
 ];
 
 const NavBar: React.FunctionComponent<NavBarProps> = () => {
-        const scrollY = useScrollPosition(60);
-
         const [color, setColor] = React.useState<string>("bg-amber-100");
         const [burger, setBurger] = React.useState<boolean>(false);
 
         const { height, scrollTo } = useWindowDimensions();
 
         return (
-                <div>
+                <>
                         <div
-                                className={`fixed z-50 flex items-center w-full h-20 px-6 ${color} justify-between sm:px-20 transform duration-500 relative`}
+                                className={`fixed z-50 flex items-center w-screen h-20 px-6 ${color} justify-between sm:px-20 transform duration-500 relative`}
                         >
                                 <div className="hidden sm:block">
                                         <ul className="flex items-center h-full mr-8 text-lg text-gray-800">
@@ -66,7 +63,7 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
                         <div onClick={() => setBurger(false)}>
                                 <BurgerBar active={burger} />
                         </div>
-                </div>
+                </>
         );
 };
 
