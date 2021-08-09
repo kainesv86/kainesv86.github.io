@@ -18,8 +18,11 @@ module.exports = {
                         },
                         spacing: {
                                 128: "32rem",
+                                132: "33rem",
                                 144: "36rem",
+                                172: "43rem",
                         },
+                        outline: { gray: "2px solid #27272A" },
                         animation: {
                                 jumping2s: "jumping 10s linear infinite",
                                 scalepoint: "scalepoint 5s linear infinite",

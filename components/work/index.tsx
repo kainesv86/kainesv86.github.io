@@ -49,7 +49,7 @@ const Work: React.FunctionComponent<WorkProps> = () => {
 
         return (
                 <div className="flex flex-col items-center flex-1 h-screen bg-yellow-50">
-                        <div className="w-full px-8 py-2 text-center rounded shadow bg-amber-100 mb-36">
+                        <div className="w-full px-8 py-2 text-center rounded shadow mb-36">
                                 <div className="flex items-center justify-between ">
                                         <div className="flex invisible">
                                                 <span className="w-4 h-4 mr-4 bg-gray-900 rounded-full"></span>

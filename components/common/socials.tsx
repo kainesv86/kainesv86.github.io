@@ -21,25 +21,28 @@ const SocialMedia: Array<SocialProps> = [
 
 const Socials: React.FunctionComponent<SocialsProps> = () => {
         return (
-                <ul className="flex mb-2 sm:mb-4">
-                        {SocialMedia.map((Item, index) => {
-                                return (
-                                        <li
-                                                className={`${index === SocialMedia.length - 1 ? "" : "mr-8"}`}
-                                                key={Item.link}
-                                        >
-                                                <Link href={Item.link}>
-                                                        <a href={Item.link}>
-                                                                <Item.Icon
-                                                                        classNameSvg="group transform hover:scale-110 duration-150 w-8 sm:w-10"
-                                                                        classNamePath="fill-current group-hover:text-black text-gray-800 duration-150"
-                                                                />
-                                                        </a>
-                                                </Link>
-                                        </li>
-                                );
-                        })}
-                </ul>
+                <div className="flex flex-col items-center">
+                        <p className="text-xl font-bold text-gray-800">Social Media</p>
+                        <ul className="flex">
+                                {SocialMedia.map((Item, index) => {
+                                        return (
+                                                <li
+                                                        className={`${index === SocialMedia.length - 1 ? "" : "mr-8"}`}
+                                                        key={Item.link}
+                                                >
+                                                        <Link href={Item.link}>
+                                                                <a href={Item.link}>
+                                                                        <Item.Icon
+                                                                                classNameSvg="group transform hover:scale-110 duration-150 w-8 sm:w-10"
+                                                                                classNamePath="fill-current group-hover:text-black text-gray-800 duration-150"
+                                                                        />
+                                                                </a>
+                                                        </Link>
+                                                </li>
+                                        );
+                                })}
+                        </ul>
+                </div>
         );
 };
 

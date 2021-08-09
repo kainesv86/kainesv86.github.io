@@ -18,30 +18,28 @@ const Form: React.FunctionComponent<FormProps> = () => {
         const onSubmit = (data: ContactProps) => console.log(data);
 
         return (
-                <form onSubmit={handleSubmit(onSubmit)}>
-                        <input
-                                className="w-full h-12 px-4 py-2 mb-4 text-xl font-medium text-gray-800 rounded bg-gray-50"
-                                placeholder={"Your name"}
-                                type="text"
-                                {...register("name")}
+                <form onSubmit={handleSubmit(onSubmit)} className="sm:py-12 sm:w-132">
+                        <p className="text-xl font-bold text-gray-800 sm:text-3xl">Send email message</p>
+                        <div className="flex">
+                                <TextField
+                                        name="name"
+                                        register={register}
+                                        type="text"
+                                        placeholder="Your name"
+                                        className="w-56 sm:mr-4"
+                                />
+                                <TextField name="email" register={register} type="text" placeholder="Your email" />
+                        </div>
+                        <TextField
+                                name="message"
+                                register={register}
+                                type="textfield"
+                                placeholder="Your message"
+                                className="sm:h-48"
                         />
-                        <input
-                                className="w-full h-12 px-4 py-2 mb-4 text-xl font-medium text-gray-800 rounded bg-gray-50"
-                                placeholder={"Your email"}
-                                type="text"
-                                {...register("email")}
-                        />
-                        <textarea
-                                className="w-full px-4 py-2 mb-4 text-xl font-medium text-gray-800 h-36"
-                                placeholder={"Your message"}
-                                cols={30}
-                                rows={10}
-                                defaultValue=""
-                                {...register("message")}
-                        ></textarea>
-                        <div className="flex justify-end">
+                        <div className="flex flex-col items-center">
                                 <button
-                                        className="px-4 py-2 text-gray-800 border-2 border-gray-800 rounded"
+                                        className="px-4 py-2 mb-2 text-gray-800 border-2 border-gray-800 rounded"
                                         type="submit"
                                 >
                                         Get in touch
