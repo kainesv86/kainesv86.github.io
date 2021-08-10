@@ -1,5 +1,9 @@
 import * as React from "react";
 
+import { Parallax } from "react-scroll-parallax";
+
+import "aos/dist/aos.css";
+
 export interface SkillsProps {}
 
 interface Skill {
@@ -51,36 +55,49 @@ const Skills: React.FunctionComponent<SkillsProps> = () => {
         ];
 
         return (
-                <div className="flex flex-col items-center justify-start flex-1 h-screen px-4 pt-10 sm:pt-32 bg-yellow-50 sm:px-44">
-                        <div className="w-full px-8 py-2 mb-4 text-center rounded shadow-md sm:mx-0 sm:mb-20 bg-yellow-50">
-                                <p className="text-4xl font-medium text-gray-800 ">Skills</p>
-                        </div>
-                        <div className="flex flex-col px-4 mt-4 sm:mt-12 sm:flex-row">
-                                <div className="mb-4 duration-300 hover:translate-x-6 hover:translate-y-6 sm:mr-96 transform-none sm:transform-gpu">
-                                        {skills.slice(0, 3).map((item) => (
-                                                <div className="mb-4" key={item.name}>
-                                                        <p className="mb-4 text-2xl font-bold text-gray-800 sm:text-3xl">
-                                                                {item.name}
-                                                        </p>
-                                                        <p className="text-lg font-medium text-gray-500 sm:text-xl">
-                                                                {item.details}
-                                                        </p>
+                <div className="flex-1 h-screen bg-yellow-50">
+                        <Parallax y={[-20, 20]}>
+                                <div className="flex flex-col items-center justify-start px-4 sm:pt-32 sm:px-44">
+                                        <div
+                                                className="w-full px-8 py-2 mb-4 text-center rounded shadow-md sm:mx-0 sm:mb-20 bg-yellow-50"
+                                                data-aos={"fade-down"}
+                                        >
+                                                <p className="text-4xl font-medium text-gray-800 ">Skills</p>
+                                        </div>
+                                        <div className="flex flex-col px-4 mt-4 sm:mt-12 sm:flex-row">
+                                                <div
+                                                        className="mb-4 duration-300 hover:translate-x-6 hover:translate-y-6 sm:mr-96 transform-none sm:transform-gpu"
+                                                        data-aos={"fade-right"}
+                                                >
+                                                        {skills.slice(0, 3).map((item) => (
+                                                                <div className="mb-4" key={item.name}>
+                                                                        <p className="mb-4 text-2xl font-bold text-gray-800 sm:text-3xl">
+                                                                                {item.name}
+                                                                        </p>
+                                                                        <p className="text-lg font-medium text-gray-500 sm:text-xl">
+                                                                                {item.details}
+                                                                        </p>
+                                                                </div>
+                                                        ))}
                                                 </div>
-                                        ))}
-                                </div>
-                                <div className="duration-300 hover:-translate-x-6 hover:translate-y-6 transform-none sm:transform-gpu">
-                                        {skills.slice(3, 6).map((item) => (
-                                                <div className="mb-4" key={item.name}>
-                                                        <p className="mb-4 text-2xl font-bold text-gray-800 sm:text-3xl">
-                                                                {item.name}
-                                                        </p>
-                                                        <p className="text-lg font-medium text-gray-500 sm:text-xl">
-                                                                {item.details}
-                                                        </p>
+                                                <div
+                                                        className="duration-300 hover:-translate-x-6 hover:translate-y-6 transform-none sm:transform-gpu"
+                                                        data-aos={"fade-left"}
+                                                >
+                                                        {skills.slice(3, 6).map((item) => (
+                                                                <div className="mb-4" key={item.name}>
+                                                                        <p className="mb-4 text-2xl font-bold text-gray-800 sm:text-3xl">
+                                                                                {item.name}
+                                                                        </p>
+                                                                        <p className="text-lg font-medium text-gray-500 sm:text-xl">
+                                                                                {item.details}
+                                                                        </p>
+                                                                </div>
+                                                        ))}
                                                 </div>
-                                        ))}
+                                        </div>
                                 </div>
-                        </div>
+                        </Parallax>
                 </div>
         );
 };
