@@ -46,7 +46,7 @@ const Work: React.FunctionComponent<WorkProps> = () => {
         }, [project]);
 
         return (
-                <div className="flex-1 h-screen bg-yellow-50">
+                <div className="flex items-center flex-1 h-screen bg-yellow-50">
                         <Parallax y={[10, -10]}>
                                 <div className="flex flex-col items-center justify-center h-full">
                                         <div

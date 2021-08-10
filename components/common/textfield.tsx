@@ -18,7 +18,7 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
         if (type === "textfield")
                 return (
                         <textarea
-                                className={`w-full px-4 py-2 mb-4 shadow text-base font-medium border-2 rounded outline-none h-36 focus:border-gray-800 border-gray-50 ${className}`}
+                                className={`w-full px-4 py-2 mb-4 shadow text-base font-medium border-2 rounded outline-none h-24 focus:border-gray-800 border-gray-50 ${className}`}
                                 placeholder={placeholder}
                                 cols={30}
                                 rows={10}

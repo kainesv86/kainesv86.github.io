@@ -8,7 +8,7 @@ export interface ContactProps {}
 
 const Contact: React.FunctionComponent<ContactProps> = () => {
         return (
-                <div className="flex-1 bg-yellow-50">
+                <div className="flex items-center flex-1 bg-yellow-50">
                         <Parallax y={[-20, 20]}>
                                 <div className="flex flex-col items-center justify-center px-8 pt-10 sm:pt-8">
                                         <div className="flex flex-col justify-center mb-0 sm:mb-4">

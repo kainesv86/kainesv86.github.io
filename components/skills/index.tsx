@@ -55,7 +55,7 @@ const Skills: React.FunctionComponent<SkillsProps> = () => {
         ];
 
         return (
-                <div className="flex-1 h-screen bg-yellow-50">
+                <div className="flex items-center flex-1 h-screen bg-yellow-50">
                         <Parallax y={[-20, 20]}>
                                 <div className="flex flex-col items-center justify-start px-4 sm:pt-32 sm:px-44">
                                         <div
