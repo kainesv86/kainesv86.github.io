@@ -14,9 +14,9 @@ interface SocialProps {
 }
 
 const SocialMedia: Array<SocialProps> = [
-        { link: "/1", Icon: Facebook },
-        { link: "/2", Icon: Github },
-        { link: "/3", Icon: Linkedin },
+        { link: "https://www.facebook.com/Kaine86", Icon: Facebook },
+        { link: "https://github.com/kainesv86", Icon: Github },
+        { link: "/", Icon: Linkedin },
 ];
 
 const Socials: React.FunctionComponent<SocialsProps> = () => {
