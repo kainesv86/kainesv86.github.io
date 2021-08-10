@@ -21,6 +21,7 @@ module.exports = {
                                 132: "33rem",
                                 144: "36rem",
                                 172: "43rem",
+                                232: "58rem",
                         },
                         outline: { gray: "2px solid #27272A" },
                         animation: {

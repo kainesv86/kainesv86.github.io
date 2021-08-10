@@ -8,23 +8,20 @@ export interface ScrollingUpProps {}
 
 const ScrollingUp: React.FunctionComponent<ScrollingUpProps> = () => {
         const scrollY = useScrollPosition(60);
-        const { scrollTo, height } = useWindowDimensions();
+        const { scrollTo } = useWindowDimensions();
 
         const position = React.useMemo<string>(() => {
-                return height * 3 - 100 <= scrollY ? "translate-y-0" : "translate-y-48";
+                // return height * 3 - 100 <= scrollY ? "translate-y-0" : "translate-y-48";
+                return "";
         }, [scrollY]);
 
         return (
                 <div
-                        className={`flex flex-col items-center justify-between rounded cursor-pointer ${position} transform duration-300`}
+                        className={`flex flex-col items-center justify-between rounded cursor-pointer ${position} bg-gray-800 transform duration-300`}
                         onClick={() => scrollTo({ behavior: "smooth", top: 0 })}
                 >
-                        <ArrowUp />
-                        <div className="text-xl font-semibold text-center text-gray-800">
-                                <p>G</p>
-                                <p>O</p>
-                                <p>U</p>
-                                <p>P</p>
+                        <div className="w-8 h-8 sm:w-12 sm:h-12">
+                                <ArrowUp />
                         </div>
                 </div>
         );

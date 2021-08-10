@@ -7,7 +7,7 @@ export interface ContactProps {}
 
 const Contact: React.FunctionComponent<ContactProps> = () => {
         return (
-                <div className="flex flex-col items-center justify-center flex-1 h-screen px-8 pt-8 bg-yellow-50">
+                <div className="flex flex-col items-center justify-center flex-1 h-screen px-8 pt-0 sm:pt-8 bg-yellow-50">
                         <div className="flex flex-col justify-center mb-0 sm:mb-4">
                                 <div className="flex flex-col items-center mb-4 text-center">
                                         <p className="text-3xl font-bold sm:text-5xl text-trueGray-800">Contact</p>

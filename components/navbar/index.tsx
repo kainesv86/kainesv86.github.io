@@ -17,25 +17,27 @@ export const NavBarLink = [
 ];
 
 const NavBar: React.FunctionComponent<NavBarProps> = () => {
-        const [color, setColor] = React.useState<string>("bg-amber-100");
         const [burger, setBurger] = React.useState<boolean>(false);
+        React.useEffect(() => {
+                console.log(burger);
+        }, [burger]);
 
         const { height, scrollTo } = useWindowDimensions();
 
         return (
-                <>
+                <React.Fragment>
                         <div
-                                className={`fixed z-50 flex items-center w-screen h-20 px-6 ${color} justify-between sm:px-20 transform duration-500 relative`}
+                                className={`fixed z-50 flex items-center w-full h-20 px-6 bg-amber-100 justify-between sm:px-20 transform duration-500`}
                         >
-                                <div className="hidden sm:block">
-                                        <ul className="flex items-center h-full mr-8 text-lg text-gray-800">
+                                <div className="hidden h-full sm:block">
+                                        <ul className="flex items-center justify-center h-full mr-8 text-lg text-gray-800 ">
                                                 {NavBarLink.map((item, index) => (
                                                         <li
                                                                 key={item.label}
-                                                                className={`relative flex items-center h-full mr-0 cursor-pointer ${
+                                                                className={`relative h-full cursor-pointer flex items-center ${
                                                                         index !== NavBarLink.length - 1
                                                                                 ? "mr-6 sm:mr-20"
-                                                                                : ""
+                                                                                : "mr-0"
                                                                 } group`}
                                                                 onClick={() =>
                                                                         scrollTo({
@@ -44,9 +46,9 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
                                                                         })
                                                                 }
                                                         >
-                                                                {item.label}
+                                                                <p>{item.label}</p>
                                                                 <span
-                                                                        className={`absolute bottom-0 right-0 block w-full h-1 duration-200 opacity-0 bg-warmGray-700 group-hover:opacity-100`}
+                                                                        className={`absolute w-full bottom-0 right-0 block h-1 duration-200 bg-warmGray-700 opacity-0 group-hover:opacity-100`}
                                                                 ></span>
                                                         </li>
                                                 ))}
@@ -60,10 +62,8 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
                                         <Link href="/">Kainé</Link>
                                 </p>
                         </div>
-                        <div onClick={() => setBurger(false)}>
-                                <BurgerBar active={burger} />
-                        </div>
-                </>
+                        <BurgerBar active={burger} setActive={setBurger} />
+                </React.Fragment>
         );
 };
 

@@ -22,7 +22,6 @@ const SocialMedia: Array<SocialProps> = [
 const Socials: React.FunctionComponent<SocialsProps> = () => {
         return (
                 <div className="flex flex-col items-center">
-                        <p className="text-xl font-bold text-gray-800">Social Media</p>
                         <ul className="flex">
                                 {SocialMedia.map((Item, index) => {
                                         return (
