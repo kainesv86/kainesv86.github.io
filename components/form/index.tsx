@@ -15,7 +15,7 @@ const Form: React.FunctionComponent<FormProps> = () => {
                 defaultValues: { name: "", email: "", message: "" },
         });
 
-        const onSubmit = (data: ContactProps) => console.log(data);
+        const onSubmit = (data: ContactProps) => {};
 
         return (
                 <form onSubmit={handleSubmit(onSubmit)} className="sm:py-12 sm:w-132">
@@ -39,7 +39,7 @@ const Form: React.FunctionComponent<FormProps> = () => {
                         />
                         <div className="flex justify-center sm:justify-end">
                                 <button
-                                        className="px-4 py-2 mb-2 text-gray-800 border-2 border-gray-800 rounded"
+                                        className="px-4 py-2 mb-2 text-gray-800 duration-300 border-2 border-gray-800 rounded hover:scale-125 transform-none sm:transform-gpu"
                                         type="submit"
                                 >
                                         Get in touch

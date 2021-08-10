@@ -18,9 +18,6 @@ export const NavBarLink = [
 
 const NavBar: React.FunctionComponent<NavBarProps> = () => {
         const [burger, setBurger] = React.useState<boolean>(false);
-        React.useEffect(() => {
-                console.log(burger);
-        }, [burger]);
 
         const { height, scrollTo } = useWindowDimensions();
 

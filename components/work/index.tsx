@@ -45,10 +45,6 @@ const Work: React.FunctionComponent<WorkProps> = () => {
                 return () => clearInterval(interval);
         }, [project]);
 
-        const Swing = React.useMemo<React.CSSProperties>(() => {
-                return { transform: `translateX(${(-project / projects.length) * 100}%)` };
-        }, [project]);
-
         return (
                 <div className="flex-1 h-screen bg-yellow-50">
                         <Parallax y={[10, -10]}>
@@ -68,7 +64,11 @@ const Work: React.FunctionComponent<WorkProps> = () => {
                                                 <div className="relative justify-center w-full overflow-hidden sm:w-232 h-80 sm:h-144">
                                                         <div
                                                                 className="absolute top-0 left-0 flex h-auto duration-300 min-w-min"
-                                                                style={Swing}
+                                                                style={{
+                                                                        transform: `translateX(${
+                                                                                (-project / projects.length) * 100
+                                                                        }%)`,
+                                                                }}
                                                         >
                                                                 <Cards>
                                                                         {projects.map((item) => (

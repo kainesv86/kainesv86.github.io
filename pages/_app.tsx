@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                         <ParallaxProvider>
                                 <Component {...pageProps} />
                         </ParallaxProvider>
-                        <div className="absolute bottom-3 right-3 sm:bottom-12 sm:right-12" data-aos="fade-up">
+                        <div className="absolute bottom-3 right-3 sm:bottom-12 sm:right-12">
                                 <ScrollingUp />
                         </div>
                 </div>

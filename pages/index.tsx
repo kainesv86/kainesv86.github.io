@@ -19,12 +19,14 @@ export default function Home() {
                                                                 data-aos={"fade-down-right"}
                                                         >
                                                                 <div className="flex flex-col mb-6 text-5xl text-center sm:text-left sm:text-6xl">
-                                                                        <p>Hi, I'm Kainé</p>
+                                                                        <p>{"Hi, I'm Kainé"}</p>
                                                                         <p>A Front-end</p>
                                                                         <p>Developer</p>
                                                                 </div>
                                                                 <p className="mb-6 text-2xl text-center text-gray-600 sm:text-3xl sm:max-w-xs sm:text-left">
-                                                                        I'm also a Back-end developer and UI designer.
+                                                                        {
+                                                                                "I'm also a Back-end developer and UI designer."
+                                                                        }
                                                                 </p>
                                                         </div>
                                                         <div
