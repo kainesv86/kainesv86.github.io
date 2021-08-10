@@ -17,7 +17,7 @@ jobs:
                           uses: actions/setup-node@v1
                           with:
                                   node-version: ${{ matrix.node-version }}
-                        - run: touch client/out/.nojekyll
+                        - run: touch out/.nojekyll
                         - name: Deploy 🚀
                           uses: JamesIves/github-pages-deploy-action@3.5.9
                           env:
@@ -25,4 +25,4 @@ jobs:
                           with:
                                   GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
                                   BRANCH: gh-pages
-                                  FOLDER: client/out
+                                  FOLDER: out
