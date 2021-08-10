@@ -66,12 +66,12 @@ const Skills: React.FunctionComponent<SkillsProps> = () => {
                                         </div>
                                         <div className="flex flex-col px-4 mt-4 sm:mt-12 sm:flex-row">
                                                 <div
-                                                        className="mb-4 duration-300 hover:translate-x-6 hover:translate-y-6 sm:mr-96 transform-none sm:transform-gpu"
+                                                        className="duration-300 sm:mb-4 hover:translate-x-6 hover:translate-y-6 sm:mr-96 transform-none sm:transform-gpu"
                                                         data-aos={"fade-right"}
                                                 >
                                                         {skills.slice(0, 3).map((item) => (
-                                                                <div className="mb-4" key={item.name}>
-                                                                        <p className="mb-4 text-2xl font-bold text-gray-800 sm:text-3xl">
+                                                                <div key={item.name} className="sm:mb-4">
+                                                                        <p className="text-2xl font-bold text-gray-800 sm:mb4 sm:text-3xl">
                                                                                 {item.name}
                                                                         </p>
                                                                         <p className="text-lg font-medium text-gray-500 sm:text-xl">
@@ -85,8 +85,8 @@ const Skills: React.FunctionComponent<SkillsProps> = () => {
                                                         data-aos={"fade-left"}
                                                 >
                                                         {skills.slice(3, 6).map((item) => (
-                                                                <div className="mb-4" key={item.name}>
-                                                                        <p className="mb-4 text-2xl font-bold text-gray-800 sm:text-3xl">
+                                                                <div key={item.name} className="sm:mb-4">
+                                                                        <p className="text-2xl font-bold text-gray-800 sm:text-3xl sm:mb-4">
                                                                                 {item.name}
                                                                         </p>
                                                                         <p className="text-lg font-medium text-gray-500 sm:text-xl">
