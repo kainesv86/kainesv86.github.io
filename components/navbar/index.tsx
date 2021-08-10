@@ -25,6 +25,7 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
                 <React.Fragment>
                         <div
                                 className={`fixed z-50 flex items-center w-full h-20 px-6 bg-amber-100 justify-between sm:px-20 transform duration-500`}
+                                id="home"
                         >
                                 <div className="hidden h-full sm:block">
                                         <ul className="flex items-center justify-center h-full mr-8 text-lg text-gray-800 ">
@@ -56,7 +57,7 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
                                 </div>
 
                                 <p className="text-3xl text-gray-800 duration-200 transform hover:scale-125">
-                                        <Link href="/">Kainé</Link>
+                                        <Link href="#home">Kainé</Link>
                                 </p>
                         </div>
                         <BurgerBar active={burger} setActive={setBurger} />
