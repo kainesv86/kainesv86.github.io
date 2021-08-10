@@ -55,11 +55,11 @@ const Skills: React.FunctionComponent<SkillsProps> = () => {
         ];
 
         return (
-                <div className="flex items-center flex-1 h-screen bg-yellow-50">
+                <div className="flex items-center justify-center flex-1 h-screen bg-yellow-50">
                         <Parallax y={[-20, 20]}>
-                                <div className="flex flex-col items-center justify-start px-4 sm:pt-32 sm:px-44">
+                                <div className="flex flex-col items-center justify-center w-full px-4 sm:pt-32">
                                         <div
-                                                className="w-full px-8 py-2 mb-4 text-center rounded shadow-md sm:mx-0 sm:mb-20 bg-yellow-50"
+                                                className="w-full px-8 py-2 mb-4 text-center rounded shadow-md sm:px-0 sm:mx-0 sm:mb-20 bg-yellow-50"
                                                 data-aos={"fade-down"}
                                         >
                                                 <p className="text-4xl font-medium text-gray-800 ">Skills</p>
