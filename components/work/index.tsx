@@ -50,7 +50,7 @@ const Work: React.FunctionComponent<WorkProps> = () => {
                         <Parallax y={[10, -10]}>
                                 <div className="flex flex-col items-center justify-center h-full">
                                         <div
-                                                className="flex items-center w-full px-4 mb-24 sm:px-44"
+                                                className="flex items-center w-full px-4 mt-6 mb-24 sm:px-44"
                                                 data-aos={"fade-down"}
                                         >
                                                 <div className="w-full px-8 py-2 text-center rounded shadow ">
