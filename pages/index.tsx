@@ -10,7 +10,7 @@ import { Parallax } from "react-scroll-parallax";
 export default function Home() {
         return (
                 <div>
-                        <div className="flex-1 h-screen p-4 mt-20 sm:p-32 bg-yellow-50">
+                        <div className="flex-1 h-screen p-4 mt-20 bg-yellow-50 sm:p-32">
                                 <Parallax y={[-20, 20]}>
                                         <div className="flex flex-col items-center justify-start">
                                                 <div className="flex flex-col items-center justify-start w-full sm:justify-center sm:flex-row">
@@ -24,9 +24,7 @@ export default function Home() {
                                                                         <p>Developer</p>
                                                                 </div>
                                                                 <p className="mb-6 text-2xl text-center text-gray-600 sm:text-3xl sm:max-w-xs sm:text-left">
-                                                                        {
-                                                                                "I'm also a Back-end developer and UI designer."
-                                                                        }
+                                                                        {"I'm also a Back-end developer and UI designer."}
                                                                 </p>
                                                         </div>
                                                         <div
@@ -40,8 +38,7 @@ export default function Home() {
                                                         className="max-w-2xl mt-10 text-xs text-center text-gray-500 duration-300 sm:mt-20 sm:text-2xl hover:translate-y-5 transform-gpu"
                                                         data-aos={"fade-down"}
                                                 >
-                                                        You can read more about my biography, experience, skills,
-                                                        education, and much more in below.
+                                                        You can read more about my biography, experience, skills, education, and much more in below.
                                                 </p>
                                         </div>
                                 </Parallax>

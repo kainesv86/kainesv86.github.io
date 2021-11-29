@@ -24,19 +24,15 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
         return (
                 <React.Fragment>
                         <div
-                                className={`fixed z-50 flex items-center w-full h-20 px-6 bg-amber-100 justify-between sm:px-20 transform duration-500`}
+                                className={`fixed z-100 flex flex-cols items-center h-full justify-between border-2 border-red-600 transform duration-500`}
                                 id="home"
                         >
                                 <div className="hidden h-full sm:block">
-                                        <ul className="flex items-center justify-center h-full mr-8 text-lg text-gray-800 ">
+                                        <ul className="flex flex-col items-center justify-center h-full text-3xl text-gray-900 ">
                                                 {NavBarLink.map((item, index) => (
                                                         <li
                                                                 key={item.label}
-                                                                className={`relative h-full cursor-pointer flex items-center ${
-                                                                        index !== NavBarLink.length - 1
-                                                                                ? "mr-6 sm:mr-20"
-                                                                                : "mr-0"
-                                                                } group`}
+                                                                className={`mb-16 px-10 cursor-pointer flex items-center duration-500 transform hover:translate-x-14`}
                                                                 onClick={() =>
                                                                         scrollTo({
                                                                                 top: height * index,
@@ -45,9 +41,6 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
                                                                 }
                                                         >
                                                                 <p>{item.label}</p>
-                                                                <span
-                                                                        className={`absolute w-full bottom-0 right-0 block h-1 duration-200 bg-warmGray-700 opacity-0 group-hover:opacity-100`}
-                                                                ></span>
                                                         </li>
                                                 ))}
                                         </ul>
@@ -56,9 +49,9 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
                                         <Burger active={burger} />
                                 </div>
 
-                                <p className="text-3xl text-gray-800 duration-200 transform hover:scale-125">
+                                {/* <p className="text-3xl text-gray-800 duration-200 transform hover:scale-125">
                                         <Link href="#home">Kainé</Link>
-                                </p>
+                                </p> */}
                         </div>
                         <BurgerBar active={burger} setActive={setBurger} />
                 </React.Fragment>
